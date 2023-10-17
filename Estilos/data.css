@@ -1,0 +1,10 @@
+.container{
+    height: 380px;
+}
+.buttons{
+    top:17%;        
+}
+.p-content{
+    font-size: calc(100% - 2px);
+    height:70px
+}
