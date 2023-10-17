@@ -17,16 +17,18 @@ body{
 
     /*rgb(255, 250, 209)*/
 }
-.center{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+.wrapper{
+    height:100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container{
     position: relative;
     width: 600px;
+    max-width: 100%;
     height: 300px;
     color: white;
     padding: 10px;
@@ -36,6 +38,7 @@ body{
     border-radius:3px;
     font: 600 normal 20px Verdana;
 }
+
 .inner-container{
     background-image:linear-gradient(45deg, rgb(15, 1, 27), rgb(12, 0, 17), rgb(18, 0, 22));
     width:inherit;
@@ -72,10 +75,11 @@ body{
     margin-top:0%;
 }   
 .p-content{
-    margin-left:30px;
+    margin-left:0px;
     background-color: #ff8000;
     width:260px;
     height: 60px;
+    text-align: justify;
     font-size:22px;
     font-family: "Martian Mono";
     padding: 8px;
@@ -108,7 +112,7 @@ body{
     padding:4px;
     animation: AparecerTexto 0s 1.1s both;
     opacity:0;
-   /* position:absolute;
+    /* position:absolute;
     top:35%;
     left:74.99%;    */
 }
@@ -131,6 +135,8 @@ body{
     transform:transtaleX(100%);   
     animation:SuavizarRevelar 0.5s 0.6s both,RevelarBloco 0.5s 1.1s both;
 }
+/*Media p-box*/
+
 @keyframes AparecerTexto{
     from{opacity:0;}
     to{opacity:1;}
@@ -146,20 +152,22 @@ body{
 .app-title{
     text-align:center;
     color: white;
-    margin: 0;
+    margin: 0px 0 0 0;
     font-family: "Chakra Petch";
     font-weight: 900;
     font-size:80px;
 }
+/*Media buttons*/
+
 .buttons{
     display:flex;
     justify-content: space-between;
     position:relative;
-    margin:0% 15px 0px 15px ;
+    margin:0% 15px 0% 15px ;
     align-items: center;
 }
 
-button{
+    button{
     width: 200px;
     margin: 6px;
     font-size: 24px;
@@ -192,6 +200,17 @@ button:active{
     }
     100%{
         transform: scale(1.05);
+    }
+}
+@media(max-width:600px){
+    .buttons{
+        position: relative;
+        top: 10%;
+        display: flex;
+        flex-direction: column;
+    }
+    button{
+        margin:25px 0 8px 0;
     }
 }
 /*Dados: */
@@ -331,7 +350,7 @@ header{
     box-sizing: border-box;
     padding: 7px;
 }
-.center{
+.wrapper{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -386,4 +405,39 @@ header{
     margin:0;
     background-image: #F98D1F;
     border: #943d1aa5 2px solid;
+}
+
+@media(max-width:600px){
+    .wrapper{
+       width: 100%;
+   } 
+   .container{
+       width: calc(100vw - 30px);
+       height: calc(100vh - 30px);
+   }
+}
+
+@media(max-width:600px){
+    .app-title{
+        font-size:50px;
+        margin-top: 15px;
+    }
+}
+
+@media(max-width:600px){
+    .p-box{
+        display: flex;
+        flex-direction: column;
+    }
+    .p-content{
+        width: 80%;
+        min-height: 5%;
+        height: 100%;
+        max-height: 100%;
+    }
+    .p-align-exp-responsive{
+        width: 100%;
+        display: flex;
+        justify-content: right;
+    }
 }
