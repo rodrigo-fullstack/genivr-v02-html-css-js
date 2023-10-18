@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário - Pessoal</title>
     <link rel="stylesheet" href="Estilos/style.css">
+    <link rel="stylesheet" href="Estilos/data.css">
     <style>
         .container{
-            height: 450px;
+            height: 330px;
         }
         .p-content{
             font-size:calc(100% - 1.5px);
@@ -16,35 +17,39 @@
         .p-exp{
             background: #02df1f;
         }
-        .input-block{
-            top:0;
-        }
+        
         .buttons{
             top:5%;
         }
-        
+        @media(max-width:600px){
+            .container{
+                width: calc(100vw - 30px);
+                height: calc(110vh - 30px);
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="center">
+    <div class="wrapper">
         <div class="container borda-animada">
             <div class="inner-container">
                 <div class="p-box">
-                    <p class="p-content">Digite a seguir suas credenciais</p>
-                    <div class="p-exp-block">
-                        <p class="p-exp">PESSOAL</p>
+                    <p class="p-content">Digite a seguir suas credenciais: </p>
+                    <div class="p-align-exp-responsive">
+                        <div class="p-exp-block">
+                            <p class="p-exp">PESSOAL</p>
+                        </div>
                     </div>
                 </div>
                 <div class="input-block">
-                    <div class="line name-line">
+                    <div class="input-group">
                         <div><input type="text" placeholder="Nome" class="input"></div>
+
+                        <div><input type="text" name="" id="" placeholder="CPF" class="input"></div>
                     </div>
-                    <div class="line id-number-line"><div><input type="text" name="" id="" placeholder="CPF" class="input"></div>
-                    </div>
-                    <div class="line email">
+                    <div class="input-group">
                         <div><input type="text" placeholder="E-mail" class="input"></div>
-                    </div>
-                    <div class="line password">
+                        
                         <div><input type="password" placeholder="Senha" class="input"></div>
                     </div>
                 </div>

@@ -17,14 +17,21 @@ body{
 
     /*rgb(255, 250, 209)*/
 }
-.wrapper{
-    height:100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@media(min-width:600px){
+    .wrapper{
+        height:100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .wrapper{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
 }
-
 .container{
     position: relative;
     width: 600px;
@@ -48,8 +55,8 @@ body{
     content: '';
     position: absolute;
     z-index: -1;
-    width: calc(100% + 20px);
-    height: calc(100% + 20px);
+    width: calc(100% + 15px);
+    height: calc(100% + 15px);
     background-image: linear-gradient(45deg, #f9761f, #fad609, #fd9a38, #fdad18, rgb(248, 105, 10));
     background-size:300%;;
     border-radius:8px;
@@ -202,30 +209,20 @@ button:active{
         transform: scale(1.05);
     }
 }
-@media(max-width:600px){
-    .buttons{
-        position: relative;
-        top: 10%;
-        display: flex;
-        flex-direction: column;
-    }
-    button{
-        margin:25px 0 8px 0;
-    }
-}
+
 /*Dados: */
 .next-prev-btn{
     width: 150px;
-    margin:0px 20px
 }
 .input-block{
+    display: flex;
+    justify-content: space-between;
     position:relative;
-    top:6%;
-    left:3.5%
+    margin:0px 20px;
 }
 .input{
     height: 27.5555px;
-    width:300px;
+    width:250px;
     background-color: #eff1f6;
     margin:10px 0px;
     border-radius: 7px;
@@ -248,7 +245,7 @@ button:active{
     display: flex;
     justify-content: center;
     position: absolute;
-   transform:translateX(-50%);
+    transform:translateX(-50%);
     top: 50%;
     left: 50%;
     
@@ -350,12 +347,7 @@ header{
     box-sizing: border-box;
     padding: 7px;
 }
-.wrapper{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
+
 .flex-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -432,12 +424,30 @@ header{
     .p-content{
         width: 80%;
         min-height: 5%;
-        height: 100%;
+        height: 20%;
         max-height: 100%;
     }
     .p-align-exp-responsive{
+        margin-top:30px ;
         width: 100%;
         display: flex;
         justify-content: right;
+    }
+}
+
+@media(max-width:600px){
+    .buttons{
+        position: relative;
+        top: 10%;
+        display: flex;
+        flex-direction: column;
+    }
+    button{
+        margin:25px 0 8px 0;
+        height:50px;
+        width: 75vw;
+    }
+    .borda-animada::after, .borda-animada::before{
+        animation: none;
     }
 }
