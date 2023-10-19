@@ -1,0 +1,237 @@
+/*Interface principal:*/
+.container{
+    width: 1000px;
+    height: 500px;
+}
+.inner-container{
+    display: flex;
+    justify-content: center;
+    
+    
+}
+.item{
+    background-color: inherit;
+    margin: 0 30px;
+    height: 100px;
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #FFC43D solid 8px;
+    border-radius: 15px;
+    outline: #7c4f28 solid;
+}
+.item-row{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin-top: 35%;
+}
+.description{
+    background-color: var(--intfc-clr);
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: "Martian Mono";
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.item:hover{
+    background-image: #db7f24;
+    cursor: pointer;
+    transition: 100ms;
+    border-color: #b58c2d;
+    box-shadow: var(--intfc-clr) 0px 0px 20px;
+}
+/* .item-description{
+    display: block;
+    background-color: #A16633;
+    color: white;
+    padding: 7px;
+    border-radius: 15px;
+    box-shadow:2px 2px 2px #482e17;
+    font-size: 20px;
+} */
+
+
+.presentation>div{
+    margin:0px 30px;
+    
+    min-width: 100px;
+    max-width:300px;
+    min-height: 60px;
+    height: max-content;
+    max-height: 120px;
+    font-size: 19px;
+    width:50%;
+}
+.p_content{
+    
+    margin-left:0px;
+    background-color: #ff8000;
+    width:260px;
+    height: 60px;
+    text-align: justify;
+    font-size:22px;
+    font-family: "Martian Mono";
+    padding: 8px;
+}
+
+/*Como fazer o cursor sumir depois de 20 contagens*/
+.p-content::after{
+    content:'|';
+    margin-left:5px;
+    animation: PiscarCursor .7s infinite;
+}
+.p-content_2{
+    margin-left:0px;
+    background-color: #ff8000;
+    width:260px;
+    height: 60px;
+    text-align: justify;
+    font-size:22px;
+    font-family: "Martian Mono";
+    padding: 8px;
+}
+.p-content_2::after{
+    content:'|';
+    margin-left:5px;
+    animation: PiscarCursor .7s infinite;
+
+}
+.p-content_3{
+    margin-left:0px;
+    background-color: #ff8000;
+    width:260px;
+    height: 60px;
+    text-align: justify;
+    font-size:22px;
+    font-family: "Martian Mono";
+    padding: 8px;
+}
+.p-content_3::after{
+    content:'|';
+    margin-left:5px;
+    animation: PiscarCursor .7s infinite;
+
+}.header{
+    width: 100%;
+    left: 0;
+    position: absolute;
+    display: flex;
+    justify-content: left;
+}
+.presentation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon-container{
+    width: fit-content;
+}
+.sair-link{
+    width: fit-content;
+    text-decoration: none;
+}
+.sair{
+    background: #F56228;
+    width: 100px;
+    border-radius: 15px;
+    border: #943c1a solid 2.3px;
+    color: white;
+    text-shadow: #814a139f 2px 2px 2px;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-top: 15px;
+}
+.sair:hover{
+    background: #903c1b;
+    transition: 100ms;
+}
+.icon2{
+    width: 90px;
+    height: 90px;
+    cursor: pointer;
+    border-radius: 20%;
+    padding: 15px;
+}
+.settings:hover{
+    animation:rotate 5s linear infinite;
+}
+@keyframes rotate{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 1000px;
+    background: #F56228;
+    border-inline: #943d1aa5 solid 2px;
+    border-bottom: #943d1aa5 solid 2px;
+    border-collapse: collapse;
+}
+.grid-container>div{
+    border-bottom: #943d1aa5 solid 2px;
+    border-right: #943d1aa5 solid 2px;
+    box-sizing: border-box;
+    padding: 7px;
+}
+
+.flex-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    background-image: #F98D1F;
+    color: white;
+    
+    text-shadow: 2px 2px 2px #452a0fae;
+}
+.flex-container>div{
+    border: #943d1aa5 solid 2px;
+}
+.selected{
+    background-image: #F56228;
+}
+.selected-two{
+    background-image: #c25226;
+
+}
+.el{
+    padding: 10px;
+
+}
+.create{
+    background: #384ee1;
+}
+.create:hover{
+    cursor: pointer;
+    background: #27379ef2;
+    transition: 100ms;
+}
+.enter{
+    background: #0bd322;
+}
+.enter:hover{
+    background: #0c911c;
+    transition: 100ms;
+    cursor: pointer;
+
+}
+.grid-container2{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+}
+.h1-school{
+    margin:0;
+    background-image: #F98D1F;
+    border: #943d1aa5 2px solid;
+}
