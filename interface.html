@@ -12,6 +12,15 @@
         .p-content{
             display: none;
         } 
+        .p-content_2{
+            display: none;
+        }
+        .p-content_3{
+            display: none;
+        }
+        .img{
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -28,10 +37,10 @@
                 </div>
             </div>
             <div class="presentation">
-                <div class = "p-content">Olá, seja bem-vindo ao GeniVR.</div>
-                <div class = "p-content_2">Esta é uma plataforma de estudos em realidade virtual. </div>
-                <div class="p-content_3">Nesta interface, muitas funcionalidades ainda estão em construção</div>
-                <div class = "img" style="width: 100px; background-color: #384ee1;"><img src="" alt="" class="logo" ></div>
+                <div class = "p-content"  id = "p-content">Olá, seja bem-vindo ao GeniVR.</div>
+                <div class = "p-content_2" id = "p-content_2">Esta é uma plataforma de estudos em realidade virtual. </div>
+                <div class="p-content_3" id = "p-content_3">Nesta interface, muitas funcionalidades ainda estão em construção. </div>
+                <img src="Testes/imagem_teste.jpg" alt="" class="logo" id = "logo"  width = "300px"">
             </div>
             <div class="item-row">
                 <div class="item" style="--intfc-clr: #384ee1;">
@@ -44,15 +53,19 @@
                     <!-- <img src="icon/controle_videogame4.png" alt="" class="icon"> -->
                     <p class="description" style = "--intfc-clr: #EA5504; ">Jogos<br>Educacionais</p>
                 </div>
-                <div class="item" style="--intfc-clr:#9A0DDB">
+                <div class="item" id="item"style="--intfc-clr:#9A0DDB">
                     <!-- Galeria-->
                     <!-- <img src="icon/comunidade_2.png" alt="" class="icon"> -->
                     <p class="description" style="--intfc-clr:#9A0DDB;">Comunidade</p>
+                
                 </div>
             </div>
             </div>
         </div>
     </div>
+    <script src="interface.js">
+        
+    </script>
 </body>
 </html>
 

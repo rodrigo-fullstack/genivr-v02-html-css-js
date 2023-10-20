@@ -59,7 +59,7 @@
     margin:0px 30px;
     
     min-width: 100px;
-    max-width:300px;
+    max-width:550px;
     min-height: 60px;
     height: max-content;
     max-height: 120px;
@@ -115,7 +115,15 @@
     margin-left:5px;
     animation: PiscarCursor .7s infinite;
 
-}.header{
+}
+.logo{
+    display: none;
+}
+.fadeIn{
+    display: block;
+    animation:fadeIn 2s ease-in 1;
+}
+.header{
     width: 100%;
     left: 0;
     position: absolute;
@@ -234,4 +242,16 @@
     margin:0;
     background-image: #F98D1F;
     border: #943d1aa5 2px solid;
+}
+@media (max-width:600px){
+    .container{
+        width: 100%;
+    }
+    .item-row{
+        flex-direction: column;
+
+    }
+    .item{
+        margin-top:20px;
+    }
 }
