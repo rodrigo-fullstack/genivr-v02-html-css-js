@@ -1,3 +1,4 @@
+
 /*Interface principal:*/
 .container{
     width: 1000px;
@@ -53,76 +54,6 @@
     box-shadow:2px 2px 2px #482e17;
     font-size: 20px;
 } */
-
-
-.presentation>div{
-    margin:0px 30px;
-    
-    min-width: 100px;
-    max-width:550px;
-    min-height: 60px;
-    height: max-content;
-    max-height: 120px;
-    font-size: 19px;
-    width:50%;
-}
-.p_content{
-    
-    margin-left:0px;
-    background-color: #ff8000;
-    width:260px;
-    height: 60px;
-    text-align: justify;
-    font-size:22px;
-    font-family: "Martian Mono";
-    padding: 8px;
-}
-
-/*Como fazer o cursor sumir depois de 20 contagens*/
-.p-content::after{
-    content:'|';
-    margin-left:5px;
-    animation: PiscarCursor .7s infinite;
-}
-.p-content_2{
-    margin-left:0px;
-    background-color: #ff8000;
-    width:260px;
-    height: 60px;
-    text-align: justify;
-    font-size:22px;
-    font-family: "Martian Mono";
-    padding: 8px;
-}
-.p-content_2::after{
-    content:'|';
-    margin-left:5px;
-    animation: PiscarCursor .7s infinite;
-
-}
-.p-content_3{
-    margin-left:0px;
-    background-color: #ff8000;
-    width:260px;
-    height: 60px;
-    text-align: justify;
-    font-size:22px;
-    font-family: "Martian Mono";
-    padding: 8px;
-}
-.p-content_3::after{
-    content:'|';
-    margin-left:5px;
-    animation: PiscarCursor .7s infinite;
-
-}
-.logo{
-    display: none;
-}
-.fadeIn{
-    display: block;
-    animation:fadeIn 2s ease-in 1;
-}
 .header{
     width: 100%;
     left: 0;
@@ -131,35 +62,59 @@
     justify-content: left;
 }
 .presentation{
+    position: relative;
+    min-width: 160px;
+    max-width: 90%;
+    top:-20%;
     display: flex;
     justify-content: center;
     align-items: center;
+    }
+
+.presentation>.p-content{
+    margin:0px 30px;
+    min-width: 100px;
+    max-width:80%;
+    min-height: 60px;
+    height: max-content;
+    max-height: 120px;
+    font-size: 19px;
+    width:50%;
 }
+.p-content{
+    
+    margin-left:0px;
+    background-color: #ff8000;
+    width:260px;
+    height: 60px;
+    text-align: justify;
+    font-size:22px;
+    font-family: "Martian Mono";
+    padding: 8px;
+}
+
+
+.p-content::after{
+    content:'|';
+    margin-left:5px;
+    animation: PiscarCursor .7s infinite;
+}
+
+.logo-container{
+    width: inherit;
+    text-align: center;
+}
+.logo-title{
+    font-family: "Chakra Petch";
+    font-weight: bold;
+    font-size: 30px;
+}
+
 .icon-container{
     width: fit-content;
 }
-.sair-link{
-    width: fit-content;
-    text-decoration: none;
-}
-.sair{
-    background: #F56228;
-    width: 100px;
-    border-radius: 15px;
-    border: #943c1a solid 2.3px;
-    color: white;
-    text-shadow: #814a139f 2px 2px 2px;
-    padding: 10px;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 20px;
-    margin-top: 15px;
-}
-.sair:hover{
-    background: #903c1b;
-    transition: 100ms;
-}
-.icon2{
+
+.icon{
     width: 90px;
     height: 90px;
     cursor: pointer;
@@ -245,11 +200,32 @@
 }
 @media (max-width:600px){
     .container{
+        width: calc(100vw - 20px);
+        height: calc(125vh - 20px);
+    }
+    .presentation{
+        position: absolute;
         width: 100%;
+        max-width: 100%;
+        height: 10%;
+        top: 25%;
+    }
+    .presentation>.p-content{
+        position: relative;
+        /*top: 40%;*/
+        min-width:40%;
+        width: max-content;
+        max-width:100%;
+    }
+    .presentation>.p-content:nth-child(1){
+        width: max-content;
+        max-width: 60%;
     }
     .item-row{
+        
+        position: absolute;
+        top: 30%;
         flex-direction: column;
-
     }
     .item{
         margin-top:20px;

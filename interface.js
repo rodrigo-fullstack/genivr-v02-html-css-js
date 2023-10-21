@@ -14,7 +14,7 @@ var actual = 0
 var text1 = document.getElementById("p-content")
 var text2 = document.getElementById("p-content_2")
 var text3 = document.getElementById("p-content_3")
-var logo = document.getElementById("logo")
+var logo = document.getElementById("logo-container")
 
 var textoArray1 = text1.innerHTML.split('');
 var textoArray2 = text2.innerHTML.split('');
@@ -22,7 +22,7 @@ var textoArray3 = text3.innerHTML.split("")
 
 function show_and_type(text,textoArray){
     type_writer(text,textoArray)
-    setTimeout(() => text.style.display = "none",12000)
+    setTimeout(() => text.style.display = "none",11000)
 }
 
 setTimeout(() => {
@@ -31,10 +31,10 @@ setTimeout(() => {
         show_and_type(text2,textoArray2)
         setTimeout(() => {
             show_and_type(text3,textoArray3)
-            setTimeout(() => logo.style.display = "block", 25000)
-        }, 19000)
-    }, 15000)
-},3000)
+            setTimeout(() => logo.style.display = "block", 15000)
+        }, 14000)
+    }, 14000)
+},800)
 
 // setTimeout(first_box(text,textoArray1),)
 
