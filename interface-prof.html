@@ -1,3 +1,4 @@
+<!--<a href="https://www.flaticon.com/br/icones-gratis/videogames" title="videogames ícones">Videogames ícones criados por Freepik - Flaticon</a>-->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -6,42 +7,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interface do APP</title>
     <link rel="stylesheet" href="Estilos/style.css">
+    <link rel="stylesheet" href="Estilos/interface.css">
     <style>
-        
+        .p-content{
+            display: none;
+        } 
+        .logo-container{
+            display: none;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <img src="icon/config.png" alt="" class="icon2">
-        <a href="index.html" class="sair-link">
-            <div class="sair">Sair</div>
-        </a>
-    </header>
-    <div class="container-new">
-        <a href="ambiente-professor.html">
-            <div class="item">
-                <!-- Salas de Aula-->
-                <img src="icon/escola_2.png" alt="" class="icon">
-                <p class="item-description">Salas de aula</p>
+    <div class="wrapper">
+        <div class="container borda-animada">
+            <div class="inner-container">
+                <div class="header">
+                        <img src="icon/settings_icon.png" alt="" class="icon settings">
+                        <a href="index.html">
+                            <img src="icon/logout.png" alt="" class="icon">
+                        </a>
+                </div>
+            <div class="presentation">
+                <div class = "p-content"  id = "p-content">Olá, seja bem-vindo ao GeniVR.</div>
+                <div class = "p-content" id = "p-content_2">Esta é uma plataforma de estudos em realidade virtual. </div>
+                <div class="p-content" id = "p-content_3">Nesta interface, muitas funcionalidades ainda estão em construção. </div>
+                <div class="logo-container" id = "logo-container">
+                    <img src="logo/logo-menor_160.png" alt="" class="logo" id = "logo" >
+                    <div class="logo-title" style="text-align: center;">GeniVR</div>
+                </div>
             </div>
-        </a>
-        <div class="item">
-            <!-- Jogos Educacionais-->
-            <img src="icon/controle_videogame4.png" alt="" class="icon">
-            <p class="item-description">Jogos Educacionais</p>
-        </div>
-        <div class="item">
-            <!-- Galeria-->
-            <img src="icon/comunidade_2.png
-" alt="" class="icon">
-            <p class="item-description">Comunidade</p>
+            <div class="item-row">
+                <div class="item" style="--intfc-clr: #384ee1;">
+                    <!-- Salas de Aula-->
+                    <!-- <img src="icon/escola_2.png" alt="" class="icon"> -->
+                    <div class="description">Salas de aula</div>
+                </div>
+                <div class="item" style="--intfc-clr: #EA5504">
+                    <!-- Jogos Educacionais-->
+                    <!-- <img src="icon/controle_videogame4.png" alt="" class="icon"> -->
+                    <p class="description">Jogos<br>Educacionais</p>
+                </div>
+                <div class="item" id="item"style="--intfc-clr:#9A0DDB">
+                    <!-- Galeria-->
+                    <!-- <img src="icon/comunidade_2.png" alt="" class="icon"> -->
+                    <p class="description">Comunidade</p>
+                
+                </div>
+            </div>
+            </div>
         </div>
     </div>
+    <script src="interface.js">
+    </script>
 </body>
 </html>
 
-<!--
-
-
-
--->
+<!-- Adicionar símbolos durante o cadastro para deixar mais bonito-->
